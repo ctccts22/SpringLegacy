@@ -6,6 +6,7 @@
 //  ArrayList<MemberVO> list=(ArrayList<MemberVO>)request.getAttribute("list");
 %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,11 +16,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript">
     function deleteFn(num) {
-      location.href="/memberDelete.do?num="+num;
+      location.href="${ctx}/memberDelete.do?num="+num;
     }
 </script>
 </head>
-[MVC03 예제-Controller+View(JSTL+EL)]
+[MVC04 예제-FrontController+POJO]
 <body>
 <table class="table table-bordered">
 <tr>
@@ -38,7 +39,7 @@
 <%--      <td><%=vo.getNum()%></td>--%>
     <td>${vo.num}</td>
 <%--      <td><a href="/memberContent.do?num=<%=vo.getNum()%>"><%=vo.getId()%></a></td>--%>
-    <td><a href="/memberContent.do?num=${vo.num}">${vo.id}</a></td>
+    <td><a href="${ctx}/memberContent.do?num=${vo.num}">${vo.id}</a></td>
 <%--      <td><%=vo.getPass()%></td>--%>
     <td>${vo.pass}</td>
 <%--      <td><%=vo.getName()%></td>--%>
@@ -55,7 +56,7 @@
     </c:forEach>
 <%-- <% } %>--%>
   <tr>
-    <td colspan="8" align="right"><input value="회원가입" type="button" class="btn btn-primary" onclick="location.href='/member/memberRegister.jsp'"/></td>
+    <td colspan="8" align="right"><input value="회원가입" type="button" class="btn btn-primary" onclick="location.href='${ctx}/memberRegister.do'"/></td>
   </tr>
 </table>
 </body>

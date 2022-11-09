@@ -5,7 +5,9 @@
   Time: 8:33 PM
   To change this template use File | Settings | File Templates.
 --%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -19,7 +21,7 @@
 </head>
 <body>
 login view
-<form action="/memberInsert.do" method="post">
+<form action="${ctx}/memberInsert.do" method="post">
   <table class="table table-bordered">
     <tr>
       <td>아이디</td>
