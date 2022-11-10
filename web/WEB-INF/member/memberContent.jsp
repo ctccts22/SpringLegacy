@@ -56,7 +56,7 @@
     <td colspan="2" align="center">
        <input type="submit" value="수정하기" class='btn btn-primary'/>
        <input type="reset" value="취소" class='btn btn-warning'/>
-       <input type="button" value="리스트" onclick="location.href='${ctx}/memberList.do'" class='btn'/>
+       <input type="button" value="리스트" onclick="location.href='${ctx}/memberList.do'" class='btn btn-success'/>
     </td>
   </tr>
 </table>

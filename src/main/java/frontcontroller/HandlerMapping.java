@@ -1,4 +1,4 @@
-package com.glowsoft.spring_test.frontcontroller;
+package frontcontroller;
 
 import controller.*;
 

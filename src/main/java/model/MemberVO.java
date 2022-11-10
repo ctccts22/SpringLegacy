@@ -1,4 +1,4 @@
-package com.glowsoft.spring_test.model;
+package model;
 // 회원(Object) >> MemberVO
 public class MemberVO {
     private int num;

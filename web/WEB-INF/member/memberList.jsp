@@ -1,5 +1,5 @@
-<%@ page import="com.glowsoft.spring_test.model.MemberDAO" %>
-<%@ page import="com.glowsoft.spring_test.model.MemberVO" %>
+<%@ page import="model.MemberDAO" %>
+<%@ page import="model.MemberVO" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%

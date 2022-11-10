@@ -1,6 +1,6 @@
 package controller;
 
-import com.glowsoft.spring_test.model.MemberDAO;
+import model.MemberDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

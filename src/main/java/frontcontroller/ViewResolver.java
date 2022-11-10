@@ -1,4 +1,4 @@
-package com.glowsoft.spring_test.frontcontroller;
+package frontcontroller;
 
 public class ViewResolver {
     public static String makeView(String nextPage) {
