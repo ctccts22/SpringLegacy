@@ -14,6 +14,8 @@ public class HandlerMapping {
         mappings.put("/memberContent.do", new MemberContentController());
         mappings.put("/memberUpdate.do", new MemberUpdateController());
         mappings.put("/memberDelete.do", new MemberDeleteController());
+        mappings.put("/memberLogin.do", new MemberLoginController());
+        mappings.put("/memberLogout.do", new MemberLogoutController());
     }
     public Controller getController(String key) { //key >> memberList.do
         return mappings.get(key);

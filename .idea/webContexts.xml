@@ -4,6 +4,8 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/web/WEB-INF/member/memberContent.jsp" value="file://$PROJECT_DIR$/web/WEB-INF/member" />
+        <entry key="file://$PROJECT_DIR$/web/WEB-INF/member/memberList.jsp" value="file://$PROJECT_DIR$/web/WEB-INF/member" />
+        <entry key="file://$PROJECT_DIR$/web/WEB-INF/member/memberRegister.jsp" value="file://$PROJECT_DIR$/web/WEB-INF/member" />
         <entry key="file://$PROJECT_DIR$/web/WEB-INF/views/test.jsp" value="file://$PROJECT_DIR$/web/WEB-INF/views" />
         <entry key="file://$PROJECT_DIR$/web/member/memberContent.jsp" value="file://$PROJECT_DIR$/web/member" />
         <entry key="file://$PROJECT_DIR$/web/member/memberInsert.jsp" value="file://$PROJECT_DIR$/web/member" />

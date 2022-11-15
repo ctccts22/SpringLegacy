@@ -20,6 +20,7 @@ public class MemberDeleteController implements Controller{
         int cnt = dao.memberDelete(num);
         String nextPage=null;
         if (cnt > 0) {
+            request.getSession().invalidate();
             nextPage="redirect:"+ctx+"/memberList.do";
         } else {
             throw new ServletException("not insert");
