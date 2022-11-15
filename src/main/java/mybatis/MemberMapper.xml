@@ -28,4 +28,7 @@
     <select id="memberLogin" parameterType="memberVO" resultType="String">
         select name from member where id=#{id} and pass=#{pass}
     </select>
+    <select id="memberDbcheck" resultType="String" parameterType="String">
+        select id from member where id=#{id}
+    </select>
 </mapper>

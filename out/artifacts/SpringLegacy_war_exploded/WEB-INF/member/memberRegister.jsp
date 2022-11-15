@@ -20,6 +20,31 @@
      function frmreset(){
    	  document.form1.reset();
      }
+	 function  doublecheck() {
+		 if($("#id").val()==''){
+			 alert("아이디를 입력하세요.");
+			 $("#id").focus();
+			 return;
+		 }
+		 var id=$("#id").val();
+		 $.ajax({
+			 url : "<c:url value='/memberDbcheck.do'/>",
+			 type : "POST",
+			 data : { "id" : id},
+			 success : dbCheck,
+			 error : function () {alert("error");}
+		 });
+	 }
+
+	 function  dbCheck(data) {
+		 if(data != "NO") {
+			 alert("중복된 아이디입니다.");
+			 $("#id").focus();
+		 } else {
+			 alert("사용가능한 아이디입니다.");
+			 $("#id").focus();
+		 }
+	 }
   </script>
 </head>
 <body>
@@ -39,14 +64,19 @@
 	  <div class="form-group">
 	    <label class="control-label col-sm-2" for="id">아이디:</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="id" name="id" placeholder="아이디를 입력하세요" style="width: 30%">
+			<table>
+				<tr>
+					<td><input type="text" class="form-control" id="id" name="id" placeholder="아이디를 입력하세요" style="width: 100%"></td>
+					<td><input type="button" value="중복체크" onclick="doublecheck()" class="btn btn-warning"></td>
+				</tr>
+			</table>
 	    </div>
 	  </div>
 	  <div class="form-group">
-	    <label class="control-label col-sm-2" for="pass">비밀번호:</label>
-	    <div class="col-sm-10">
-	      <input type="password" class="form-control" id="pass" name="pass" placeholder="비밀번호를 입력하세요" style="width: 30%">
-	    </div>
+			<label class="control-label col-sm-2" for="pass">비밀번호:</label>
+			<div class="col-sm-10">
+				<input type="password" class="form-control" id="pass" name="pass" placeholder="비밀번호를 입력하세요" style="width: 30%">
+			</div>
 	  </div>
 	   <div class="form-group">
 	    <label class="control-label col-sm-2" for="name">이름:</label>
